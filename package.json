@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1",
+    "lightbox2": "^2.12.0"
   }
 }

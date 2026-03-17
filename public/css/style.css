@@ -2,6 +2,7 @@
 body{
     background-color: aliceblue;
     font-family: "Inter", sans-serif;
+    background-color: #ecfdf7;
 }
 .glide img{
     /* max-height: 20%; 
@@ -20,7 +21,7 @@ body{
 }
 header{
   display: flex;
-  background-color: rgb(193, 235, 221);
+  background-color: #c3d1cc;
   height: 90px;
   width: 100%;
   justify-content: center;
@@ -39,11 +40,18 @@ h1{
 header>button{
   margin-left: 50%;
   height: 30px;
-  background-color: blue;
+  background-color: rgb(170, 170, 247);
   color: aliceblue;
   border-radius: 10px;
 }
-
+.chart-container {
+  width: 80%;
+  margin: auto;
+}
+#map { 
+  margin-top: 20px;
+  height: 180px; 
+}
 @media screen and (min-width: 768px) {
   /* CSS for tablets and up */
   header{

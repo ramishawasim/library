@@ -1,3 +1,4 @@
+/* mobile first */
 body{
     background-color: aliceblue;
 }
@@ -10,17 +11,52 @@ body{
     margin-right: auto;
 }
 .container{
-    margin-top: 100px;
     height: 100%;
-    width: 350px;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+header{
+  display: flex;
+  background-color: rgb(193, 235, 221);
+  height: 90px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+header>ul{
+  
+  display: none;
+
+}
+
+header>button{
+  margin-left: 70%;
+  height: 30px;
+  background-color: blue;
+  color: aliceblue;
+  border-radius: 10px;
+}
 
 @media screen and (min-width: 768px) {
   /* CSS for tablets and up */
+  header{
+  display: flex;
+  background-color: aquamarine;
+  height: 90px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+header >ul{
+  display: flex;
+  gap: 20px;
+  
+}
 }
 @media screen and (min-width: 1024px) {
   /* CSS for laptops/desktops and up */

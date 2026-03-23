@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/glide.theme.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
@@ -19,7 +20,7 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 
-    <title>Wayfarer — Travel Agency</title>
+    <title>Ways - Travel Agency</title>
 </head>
 <body>
 
@@ -33,56 +34,57 @@
     </ul>
     <button>Book Now!</button>
   </header>
+  
+    <!-- slider -->
+    
+    <section class="hero-banner">
+      <div class="hero-banner-text">
+        <span class="hero-banner-tag">✦ Curated Journeys</span>
+        <h2 class="hero-banner-title">Discover the<br /><em>World's Wonders</em></h2>
+        <p class="hero-banner-sub">Handcrafted itineraries for curious travellers — from sunlit coasts to ancient highlands.</p>
+      </div>
 
-  <!-- slider -->
-  <section class="hero-banner">
-    <div class="hero-banner-text">
-      <span class="hero-banner-tag">✦ Curated Journeys</span>
-      <h2 class="hero-banner-title">Discover the<br /><em>World's Wonders</em></h2>
-      <p class="hero-banner-sub">Handcrafted itineraries for curious travellers — from sunlit coasts to ancient highlands.</p>
-    </div>
-
-    <!-- glider.js -->
-    <div class="container">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide"><img src="./assets/images/travel1.jpg" alt="Destination 1"></li>
-            <li class="glide__slide"><img src="./assets/images/travel2.jpg" alt="Destination 2"></li>
-            <li class="glide__slide"><img src="./assets/images/travel3.jpg" alt="Destination 3"></li>
-          </ul>
+      <!-- glider.js -->
+      <div class="container">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><img src="./assets/images/travel1.jpg" alt="Destination 1"></li>
+              <li class="glide__slide"><img src="./assets/images/travel2.jpg" alt="Destination 2"></li>
+              <li class="glide__slide"><img src="./assets/images/travel3.jpg" alt="Destination 3"></li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8592;</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8594;</button>
+          </div>
         </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8592;</button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8594;</button>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- search bar -->
-  <section class="search-bar">
-    <div class="search-bar-inner">
-      <div class="search-bar-field">
-        <label>Destination</label>
-        <input type="text" placeholder="Paris, Bali, Kyoto…" />
+    <!-- search bar -->
+    <section class="search-bar">
+      <div class="search-bar-inner">
+        <div class="search-bar-field">
+          <label>Destination</label>
+          <input type="text" placeholder="Paris, Bali, Kyoto…" />
+        </div>
+        <div class="search-bar-sep"></div>
+        <div class="search-bar-field">
+          <label>Dates</label>
+          <input type="text" placeholder="Pick dates" />
+        </div>
+        <div class="search-bar-sep"></div>
+        <div class="search-bar-field">
+          <label>Guests</label>
+          <input type="text" placeholder="2 Adults" />
+        </div>
+        <button class="search-bar-btn">Search</button>
       </div>
-      <div class="search-bar-sep"></div>
-      <div class="search-bar-field">
-        <label>Dates</label>
-        <input type="text" placeholder="Pick dates" />
-      </div>
-      <div class="search-bar-sep"></div>
-      <div class="search-bar-field">
-        <label>Guests</label>
-        <input type="text" placeholder="2 Adults" />
-      </div>
-      <button class="search-bar-btn">Search</button>
-    </div>
-  </section>
+    </section>
 
 <!-- features -->
-  <main class="main-content">
+  <main class="main-content" >
     <section class="features">
       <div class="features-header">
         <span class="section-tag">✦ Why Wayfarer</span>
@@ -107,28 +109,31 @@
       </div>
     </section>
 
-    <!-- chart.js -->
-    <section class="section-plan">
-      <div class="section-plan-header">
-        <span class="section-tag">✦ Insights</span>
-        <h1>Plan Your Trip with Us!</h1>
-        <p>See where our travellers are heading this season — top destinations at a glance.</p>
-      </div>
-      <div class="chart-container">
-        <canvas id="myDoughnutChart"></canvas>
-      </div>
-    </section>
+    <!-- chart.js + animate on load -->
+     <div data-aos="fade-up">
+      <section class="section-plan" >
+        <div class="section-plan-header">
+          <span class="section-tag">✦ Insights</span>
+          <h1>Plan Your Trip with Us!</h1>
+          <p>See where our travellers are heading this season — top destinations at a glance.</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="myDoughnutChart"></canvas>
+        </div>
+      </section>
+    </div>
 
-    <!-- leaflet.js -->
-    <section class="section-map">
-      <div class="section-map-header">
-        <span class="section-tag">✦ Explore</span>
-        <h2>Find Your<br /><em>Next Destination</em></h2>
-        <p>Browse the interactive map and discover destinations we cover across the globe.</p>
-      </div>
-      <div id="map"></div>
-    </section>
-
+    <!-- leaflet.js + animate on load -->
+     <div data-aos="fade-up">
+      <section class="section-map">
+        <div class="section-map-header">
+          <span class="section-tag">✦ Explore</span>
+          <h2>Find Your<br /><em>Next Destination</em></h2>
+          <p>Browse the interactive map and discover destinations we cover across the globe.</p>
+        </div>
+        <div id="map"></div>
+      </section>
+     </div>
   </main>
 
   <!-- footer -->
@@ -147,9 +152,12 @@
   <!-- scripts -->
   <script src="./js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     new Glide('.glide').mount();
   </script>
-
+  <script>
+  AOS.init();
+  </script>
 </body>
 </html>

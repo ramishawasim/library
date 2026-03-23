@@ -6,7 +6,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css"/>
     <link rel="stylesheet" href="./css/glide.core.min.css">
     <link rel="stylesheet" href="./css/glide.theme.min.css">
@@ -19,44 +19,137 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 
-    <title>Libraries</title>
+    <title>Wayfarer — Travel Agency</title>
 </head>
 <body>
+
+  <!-- header -->
   <header>
+    <p>Ways</p>
     <ul>
       <li>Home</li>
       <li>Travel Help</li>
       <li>Popular</li>
     </ul>
-    <p>Travel Agency</p>
     <button>Book Now!</button>
   </header>
 
-  <div class="container">
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide"><img src="./assets/images/travel1.jpg"></li>
-          <li class="glide__slide"><img src="./assets/images/travel2.jpg"></li>
-          <li class="glide__slide"><img src="./assets/images/travel3.jpg"></li>
-        </ul>
-      </div>
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+  <!-- slider -->
+  <section class="hero-banner">
+    <div class="hero-banner-text">
+      <span class="hero-banner-tag">✦ Curated Journeys</span>
+      <h2 class="hero-banner-title">Discover the<br /><em>World's Wonders</em></h2>
+      <p class="hero-banner-sub">Handcrafted itineraries for curious travellers — from sunlit coasts to ancient highlands.</p>
+    </div>
+
+    <!-- glider.js -->
+    <div class="container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="./assets/images/travel1.jpg" alt="Destination 1"></li>
+            <li class="glide__slide"><img src="./assets/images/travel2.jpg" alt="Destination 2"></li>
+            <li class="glide__slide"><img src="./assets/images/travel3.jpg" alt="Destination 3"></li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8592;</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8594;</button>
+        </div>
       </div>
     </div>
-  </div>
-  <h1>Plan Your Trip with Us!</h1>
-  <div class="chart-container">
-    <canvas id="myDoughnutChart"></canvas>
-  </div>
-  <div id="map"></div>
+  </section>
 
+  <!-- search bar -->
+  <section class="search-bar">
+    <div class="search-bar-inner">
+      <div class="search-bar-field">
+        <label>Destination</label>
+        <input type="text" placeholder="Paris, Bali, Kyoto…" />
+      </div>
+      <div class="search-bar-sep"></div>
+      <div class="search-bar-field">
+        <label>Dates</label>
+        <input type="text" placeholder="Pick dates" />
+      </div>
+      <div class="search-bar-sep"></div>
+      <div class="search-bar-field">
+        <label>Guests</label>
+        <input type="text" placeholder="2 Adults" />
+      </div>
+      <button class="search-bar-btn">Search</button>
+    </div>
+  </section>
+
+<!-- features -->
+  <main class="main-content">
+    <section class="features">
+      <div class="features-header">
+        <span class="section-tag">✦ Why Wayfarer</span>
+        <h2>Travel Done<br /><em>Differently</em></h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-card-icon">✈️</div>
+          <h3>Flight Packages</h3>
+          <p>Best-price flights bundled with curated stay options worldwide.</p>
+        </div>
+        <div class="feature-card feature-card-accent">
+          <div class="feature-card-icon">🏨</div>
+          <h3>Handpicked Hotels</h3>
+          <p>Boutique stays and luxury resorts chosen by our travel experts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-icon">🗺️</div>
+          <h3>Guided Tours</h3>
+          <p>Local guides who bring culture and history to life on every step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- chart.js -->
+    <section class="section-plan">
+      <div class="section-plan-header">
+        <span class="section-tag">✦ Insights</span>
+        <h1>Plan Your Trip with Us!</h1>
+        <p>See where our travellers are heading this season — top destinations at a glance.</p>
+      </div>
+      <div class="chart-container">
+        <canvas id="myDoughnutChart"></canvas>
+      </div>
+    </section>
+
+    <!-- leaflet.js -->
+    <section class="section-map">
+      <div class="section-map-header">
+        <span class="section-tag">✦ Explore</span>
+        <h2>Find Your<br /><em>Next Destination</em></h2>
+        <p>Browse the interactive map and discover destinations we cover across the globe.</p>
+      </div>
+      <div id="map"></div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="site-footer-brand">Ways</div>
+    <p class="site-footer-tagline">Go Further. Live More.</p>
+    <nav class="site-footer-links">
+      <a href="#">Home</a>
+      <a href="#">Travel Help</a>
+      <a href="#">Popular</a>
+      <a href="#">Contact</a>
+    </nav>
+    <p class="site-footer-copy">© 2026 Wayfarer Travel Agency. All rights reserved.</p>
+  </footer>
+
+  <!-- scripts -->
   <script src="./js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script>
-    new Glide('.glide').mount()
+    new Glide('.glide').mount();
   </script>
+
 </body>
 </html>
